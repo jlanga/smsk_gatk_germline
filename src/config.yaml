@@ -1,6 +1,31 @@
 samples:
-    A: results/raw/samples/A.fastq
-    B: results/raw/samples/B.fastq
+    papa:
+        lib1:
+            forward: data/reads/papa.read1.fq.gz
+            reverse: data/reads/papa.read2.fq.gz
+            molecule: dna
+            type: PE
+            phred: phred33
+            adaptor: None
+    paalt:
+        lib1:
+            forward: data/reads/paalt.read1.fq.gz
+            reverse: data/reads/paalt.read2.fq.gz
+            molecule: dna
+            type: PE
+            phred: phred33
+            adaptor: None
+    altalt:
+        lib1:
+            forward: data/reads/altalt.read1.fq.gz
+            reverse: data/reads/altalt.read2.fq.gz
+            molecule: dna
+            type: PE
+            phred: phred33
+            adaptor: None
 
-urls:
-    tarball: https://bitbucket.org/snakemake/snakemake/downloads/snakemake-tutorial-data.tar.gz
+reference:
+    data/reference/chr19_chr19_KI270866v1_alt.fasta
+
+alternative:
+    data/reference/chr19_chr19_KI270866v1_alt.fasta.alt

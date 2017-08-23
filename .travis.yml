@@ -19,7 +19,11 @@ before_install:
   - export PATH="/home/travis/miniconda3/bin:$PATH"
 install:
   - bash src/install/conda_env.sh
+  - bash src/install/from_tarball.sh
+  - source activate smsk_gatk_germline
+  - Rscript src/install/from_cran.R
+  - source deactivate smsk_gatk_germline
 
 script:
-  - source activate smsk
+  - source activate smsk_gatk_germline
   - snakemake -j
